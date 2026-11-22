@@ -1,0 +1,8 @@
+{
+  "name": "STUDYX AI",
+  "description": "Make space for what's next. A student productivity platform uniting courses, interactive quizzes, assignments, exams, focus sessions, smart timetables, and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

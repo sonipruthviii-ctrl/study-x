@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.studyx-glass {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dark .studyx-glass {
+  background: rgba(13, 24, 48, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.studyx-gradient-btn {
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 55%, #0EA5E9 100%);
+}
+
+.studyx-gradient-btn:hover {
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 55%, #0284C7 100%);
+}
+
+.studyx-hero-mesh {
+  background-image:
+    radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.14) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(14, 165, 233, 0.12) 0px, transparent 48%);
+}
+
+.dark .studyx-hero-mesh {
+  background-image:
+    radial-gradient(at 15% 10%, rgba(37, 99, 235, 0.28) 0px, transparent 48%),
+    radial-gradient(at 85% 18%, rgba(56, 189, 248, 0.18) 0px, transparent 46%),
+    radial-gradient(at 50% 95%, rgba(29, 78, 216, 0.16) 0px, transparent 55%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
